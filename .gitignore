@@ -1,0 +1,8 @@
+# The environment this builds, if anybody points --prefix at the checkout.
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# What a --generate run leaves behind.
+*.wav

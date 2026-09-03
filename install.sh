@@ -41,7 +41,7 @@
 #   --verify       skip the install and only check an environment that exists,
 #                  which is what to run after any pip upgrade in it
 #
-set -euo pipefail
+set -eou pipefail
 
 PREFIX="${HOME}/.audiocraft"
 GENERATE=0

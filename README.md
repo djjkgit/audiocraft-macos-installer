@@ -115,6 +115,25 @@ does not manage, so an unrelated `pip install --upgrade` is exactly the thing
 that quietly removes it. Run `--verify` after any upgrade in that environment
 and it puts the stand-in back and re-runs the arithmetic.
 
+## Something to run afterwards
+
+`examples/` has three scripts, one per thing audiocraft does. They take the
+prompt on the command line and write a `.wav`:
+
+```bash
+PY=~/.audiocraft/bin/python
+
+$PY examples/musicgen.py --duration 2 "a single piano chord"   # start here
+$PY examples/audiogen.py "rain on a tin roof"
+$PY examples/melody.py hummed.m4a "brass band, marching"
+```
+
+The first is deliberately tiny — two seconds from the smallest model — because
+the first run of any model downloads its weights, and it is better to find a
+problem before 6 GB than after. [examples/README.md](examples/README.md) covers
+the rest: what each model wants to be asked for, what the downloads cost, and
+why it all runs on the CPU no matter what GPU is in the machine.
+
 ## Two pins that are load bearing
 
 The script installs `numpy<2` and `transformers<4.56` alongside audiocraft.

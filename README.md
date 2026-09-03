@@ -1,4 +1,4 @@
-# AudioCraft on macOS, in one command
+# AudioCraft on macOS M1(Max), in one command
 
 Meta's [AudioCraft](https://github.com/facebookresearch/audiocraft) — MusicGen
 for music, AudioGen for sound effects, both from a written description — does
